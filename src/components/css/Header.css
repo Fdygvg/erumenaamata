@@ -1,0 +1,232 @@
+.header {
+  position: sticky;
+  top: 0;
+  background: rgba(26, 26, 46, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.header-container {
+  max-width: var(--max-width-content);
+  margin: 0 auto;
+  padding: var(--spacing-sm) var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.logo-initial {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  font-family: var(--font-serif);
+}
+
+.logo-text {
+  font-size: var(--font-size-body);
+  color: var(--color-white);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Mode Toggle */
+.mode-toggle {
+  display: flex;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.25rem;
+  border-radius: var(--border-radius);
+}
+
+.mode-btn {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-white);
+  background: transparent;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.mode-btn.active {
+  background: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.mode-btn:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-xs);
+}
+
+.hamburger {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-accent);
+  position: relative;
+  transition: background var(--transition-base);
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: var(--color-accent);
+  transition: transform var(--transition-base);
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+.hamburger.open {
+  background: transparent;
+}
+
+.hamburger.open::before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open::after {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav button {
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-size: var(--font-size-body);
+  cursor: pointer;
+  padding: var(--spacing-xs) 0;
+  position: relative;
+  transition: color var(--transition-base);
+  font-weight: 400;
+}
+
+.nav button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transition: width var(--transition-base);
+}
+
+.nav button:hover {
+  color: var(--color-accent);
+}
+
+.nav button:hover::after {
+  width: 100%;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+  }
+
+  .mode-toggle {
+    order: 3;
+    width: 100%;
+    margin-top: var(--spacing-xs);
+  }
+
+  .mode-btn {
+    flex: 1;
+    text-align: center;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    z-index: 1001;
+  }
+
+  .nav {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    max-height: calc(100vh - 100px);
+    background: rgba(26, 26, 46, 0.98);
+    flex-direction: column;
+    gap: 0;
+    padding: var(--spacing-sm) 0;
+    transform: translateX(100%);
+    transition: transform var(--transition-base);
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  .nav.nav-open {
+    transform: translateX(0);
+  }
+
+  .nav button {
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-align: left;
+    width: 100%;
+  }
+
+  .nav button::after {
+    display: none;
+  }
+}
+
+/* Tablet & Desktop */
+@media (min-width: 769px) {
+  .header-container {
+    padding: 1.25rem 2rem;
+  }
+
+  .logo-text {
+    font-size: 1.1rem;
+  }
+
+  .nav {
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    gap: 3rem;
+  }
+
+  .nav button {
+    font-size: 1.05rem;
+  }
+}
