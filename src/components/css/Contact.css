@@ -37,18 +37,35 @@
   gap: var(--spacing-sm);
   padding: var(--spacing-lg);
   background: rgba(255, 255, 255, 0.05);
-  border: 2px solid var(--color-accent);
+  border: 2px solid transparent;
   border-radius: var(--border-radius);
   color: var(--color-white);
   text-decoration: none;
   transition: all var(--transition-base);
 }
 
-.contact-card:hover {
-  background: var(--color-accent);
-  color: var(--color-primary);
+.contact-card.gmail {
+  border-color: #EA4335;
+}
+
+.contact-card.gmail:hover {
+  background: #EA4335;
   transform: translateY(-4px);
-  box-shadow: var(--shadow-accent);
+  box-shadow: 0 4px 12px rgba(234, 67, 53, 0.4);
+}
+
+.contact-card.whatsapp {
+  border-color: #25D366;
+}
+
+.contact-card.whatsapp:hover {
+  background: #25D366;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+.contact-card:hover {
+  color: var(--color-white);
 }
 
 .contact-card i {
@@ -58,12 +75,6 @@
 .contact-card span {
   font-size: var(--font-size-large);
   font-weight: 500;
-}
-
-.contact-availability {
-  font-size: var(--font-size-body);
-  color: var(--color-text-light);
-  font-style: italic;
 }
 
 /* Tablet & Desktop */

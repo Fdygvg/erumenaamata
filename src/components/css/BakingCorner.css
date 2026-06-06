@@ -1,0 +1,134 @@
+.baking-corner {
+  padding: var(--spacing-xxl) var(--spacing-md);
+  background: var(--color-card);
+}
+
+.baking-container {
+  max-width: var(--max-width-content);
+  margin: 0 auto;
+}
+
+.baking-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+/* Left Side - Content */
+.baking-content {
+  order: 1;
+}
+
+.baking-content h2 {
+  font-size: var(--font-size-h2);
+  color: var(--color-primary);
+  margin: 0 0 var(--spacing-xs);
+  font-family: var(--font-serif);
+}
+
+.baking-subtitle {
+  font-size: var(--font-size-large);
+  color: var(--color-accent);
+  font-style: italic;
+  margin: 0 0 var(--spacing-md);
+}
+
+.baking-description {
+  font-size: var(--font-size-body);
+  line-height: 1.8;
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-lg);
+}
+
+.baking-specialties h3 {
+  font-size: var(--font-size-h4);
+  color: var(--color-primary);
+  margin: 0 0 var(--spacing-md);
+  font-family: var(--font-serif);
+}
+
+.baking-specialties ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.baking-specialties li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+}
+
+.baking-specialties i {
+  color: var(--color-accent);
+  font-size: 1.2rem;
+}
+
+/* Right Side - Images Grid */
+.baking-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  order: 2;
+  max-width: 400px;
+}
+
+.baking-image-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.baking-image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.baking-image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .baking-corner {
+    padding: var(--spacing-xxl) 2rem;
+  }
+
+  .baking-grid {
+    gap: 3rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .baking-corner {
+    padding: var(--spacing-xxl) 3rem;
+  }
+
+  .baking-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .baking-content {
+    order: 1;
+  }
+
+  .baking-images {
+    order: 2;
+  }
+}

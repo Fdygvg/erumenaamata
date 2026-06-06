@@ -52,7 +52,6 @@ export default function Header() {
           {!isAuthorMode && (
             <>
               <button onClick={() => scrollToSection('services')}>Services</button>
-              <button onClick={() => scrollToSection('pricing')}>Pricing</button>
             </>
           )}
           {isAuthorMode && (

@@ -11,18 +11,16 @@ export default function Contact() {
         <p className="contact-tagline">{pricing.tagline}</p>
         
         <div className="contact-methods">
-          <a href={`mailto:${contact.email}`} className="contact-card">
-            <i className="fa-solid fa-envelope"></i>
-            <span>{contact.email}</span>
+          <a href={`mailto:${contact.email}`} className="contact-card gmail">
+            <i className="fa-brands fa-google"></i>
+            <span>Gmail</span>
           </a>
           
-          <a href={`tel:${contact.phone}`} className="contact-card">
-            <i className="fa-solid fa-phone"></i>
-            <span>{contact.phone}</span>
+          <a href={contact.whatsapp} target="_blank" rel="noopener noreferrer" className="contact-card whatsapp">
+            <i className="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
           </a>
         </div>
-
-        <p className="contact-availability">{contact.availability}</p>
       </div>
     </section>
   );

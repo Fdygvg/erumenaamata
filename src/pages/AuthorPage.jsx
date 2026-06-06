@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import AuthorHero from '../components/AuthorHero';
 import Books from '../components/Books';
+import BakingCorner from '../components/BakingCorner';
 import AuthorAbout from '../components/AuthorAbout';
 import Contact from '../components/Contact';
 
@@ -16,6 +17,7 @@ export default function AuthorPage() {
     <>
       <AuthorHero />
       <Books />
+      <BakingCorner />
       <AuthorAbout />
       <Contact />
     </>
