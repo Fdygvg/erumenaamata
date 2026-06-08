@@ -9,8 +9,8 @@ export const siteData = {
   authorHero: {
     name: "Erumena Akpoghene-Adaiah",
     headline: "Preserving Culture, Crafting Stories, Inspiring Hearts",
-    tagline: "Award-winning author and daughter of the Amata creative dynasty—celebrating Niger Delta heritage through literature.",
-    image: "/authorimage.jpeg",
+    tagline: "Award winning author and daughter of the Amata creative dynasty, celebrating Niger Delta heritage through literature.",
+    image: "/authorimage.jpg",
   },
 
   // Services
@@ -39,6 +39,12 @@ export const siteData = {
       description: "Crafting compelling, culturally-grounded content with decades of media and literary experience",
       icon: "fa-solid fa-lightbulb",
     },
+    {
+      id: 5,
+      title: "Ghostwriting",
+      description: "Full-length book authorship under your name, capturing your unique voice and vision with complete confidentiality",
+      icon: "fa-solid fa-user-secret",
+    },
   ],
 
   // Document Types
@@ -51,27 +57,41 @@ export const siteData = {
     "Business Documents",
   ],
 
-  // Books (2 books with covers)
+  // Books (3 books with covers)
   books: [
     {
       id: 1,
       title: "The Dimpsey Chronicles",
       genre: "Children's Fiction",
-      year: 2018,
-      description: "Set in the lively oil town of Warri, this heartwarming book follows five-year-old Efeturi 'Dimpsey' Johnson as she navigates childhood games, curiosity, and life lessons, bringing Niger Delta culture vividly to life.",
+      year: 2019,
+      description: "In the oil rich town of Warri, five year old Efeturi Johnson, fondly called Dimpsey, wins hearts with her unforgettable dimples. From becoming an overnight singing sensation at home to learning that charm alone won't save her from consequences, Dimpsey discovers every action ripples outward. A vivid peek into South South Nigerian childhood, complete with local games, cultural heritage, and lessons woven into every escapade.",
       coverFront: "/book img 1 front.png",
       coverBack: null,
       purchaseUrl: "#",
+      demoVideo: null,
     },
     {
       id: 2,
       title: "From Bamboo to Bloom",
-      genre: "Literary Non-Fiction",
-      year: 2022,
-      description: "An evocative exploration of growth, resilience, and the beauty of waiting on God's perfect timing, drawing deeply from Nigerian culture and lived experience.",
+      genre: "Coming of Age Fiction",
+      year: 2023,
+      description: "Ofuafo, the Bamboo Prince, carries privilege like a crown until life teaches him that true strength is quiet, not commanding. Set in rural Nigeria, this lyrical story follows a boy who bends before he blossoms, shaped by humility, mentorship, and the gentle hands that refuse to give up on him. A story about bullying, growth, and the slow, tender work of becoming your best self.",
       coverFront: "/book img 2 front.png",
       coverBack: "/book img 2 back.png",
+      purchaseUrl: "https://selar.com/l18u43y444",
+      demoVideo: "/book2demovideo.mp4",
+    },
+    {
+      id: 3,
+      title: "The Grandma Cookies Chronicles",
+      genre: "Children's Adventure",
+      year: "Coming Soon",
+      description: "Welcome to Grandma Cookies' kitchen, where every recipe teaches a lesson and every missing crumb is a mystery waiting to be solved. When a mountain of Chin Chin vanishes before the Community Festival, Grandma and her little detectives set out to crack the case. What they find is sweeter than any treat: forgiveness, teamwork, and the kind of love that brings a whole community together. A heartwarming series rich with Nigerian culture and kitchen magic.",
+      coverFront: "/book img 3 front.png",
+      coverBack: null,
       purchaseUrl: "#",
+      demoVideo: null,
+      comingSoon: true,
     },
   ],
 
@@ -91,9 +111,14 @@ export const siteData = {
       "Traditional Confectioneries",
       "Baking & Storytelling Youth Workshops"
     ],
-    images: [
-      "/images/baking1.jpg",
-      "/images/baking2.jpg"
+    bakedCreations: [
+      { id: 1, image: "/bakedcreation1.jpg", alt: "Custom celebration cake" },
+      { id: 2, image: "/bakedcreation2.jpg", alt: "Traditional confectionery" },
+      { id: 3, image: "/bakedcreation3.jpg", alt: "Artisanal baked creation" },
+      { id: 4, image: "/bakedcreation4.jpg", alt: "Specialty cake design" },
+      { id: 5, image: "/bakedcreation5.jpg", alt: "Festive baked good" },
+      { id: 6, image: "/bakedcreation6.jpg", alt: "Premium confectionery" },
+      { id: 7, image: "/bakedcreation7.jpg", alt: "Gourmet creation" },
     ]
   },
 

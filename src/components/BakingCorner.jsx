@@ -1,4 +1,5 @@
 import { siteData } from '../data/content';
+import BakingCarousel from './BakingCarousel';
 import './css/BakingCorner.css';
 
 export default function BakingCorner() {
@@ -27,17 +28,9 @@ export default function BakingCorner() {
             </div>
           </div>
 
-          {/* Right Side - Images Grid */}
-          <div className="baking-images">
-            {bakingCorner.images.map((image, index) => (
-              <div key={index} className="baking-image-wrapper">
-                <img 
-                  src={image} 
-                  alt={`Baked creation ${index + 1}`}
-                  loading="lazy"
-                />
-              </div>
-            ))}
+          {/* Right Side - Carousel */}
+          <div className="baking-carousel-wrapper">
+            <BakingCarousel images={bakingCorner.bakedCreations} />
           </div>
         </div>
       </div>

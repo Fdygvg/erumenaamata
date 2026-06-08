@@ -1,15 +1,37 @@
 import { useState } from 'react';
 import { siteData } from '../data/content';
+import Modal from './Modal';
 import './css/Books.css';
 
 export default function Books() {
   const { books } = siteData;
   const [flippedBook, setFlippedBook] = useState(null);
+  const [videoModalOpen, setVideoModalOpen] = useState(false);
+  const [currentVideo, setCurrentVideo] = useState(null);
+  const [messageModal, setMessageModal] = useState({ isOpen: false, title: '', message: '', type: 'info' });
 
   const handleFlip = (bookId, hasBackCover) => {
     if (hasBackCover) {
       setFlippedBook(flippedBook === bookId ? null : bookId);
     }
+  };
+
+  const openVideoModal = (videoUrl) => {
+    setCurrentVideo(videoUrl);
+    setVideoModalOpen(true);
+  };
+
+  const closeVideoModal = () => {
+    setVideoModalOpen(false);
+    setCurrentVideo(null);
+  };
+
+  const openMessageModal = (title, message, type = 'info') => {
+    setMessageModal({ isOpen: true, title, message, type });
+  };
+
+  const closeMessageModal = () => {
+    setMessageModal({ ...messageModal, isOpen: false });
   };
 
   return (
@@ -54,23 +76,68 @@ export default function Books() {
                 </div>
                 <h3>{book.title}</h3>
                 <p>{book.description}</p>
-                <a
-                  href={book.purchaseUrl}
-                  className="btn-buy"
-                  onClick={(e) => {
-                    if (book.purchaseUrl === '#') {
-                      e.preventDefault();
-                      alert('Purchase link coming soon!');
-                    }
-                  }}
-                >
-                  Buy Now
-                </a>
+                
+                <div className="book-actions">
+                  <a
+                    href={book.purchaseUrl}
+                    className={`btn-buy ${book.comingSoon ? 'coming-soon' : ''}`}
+                    target={book.purchaseUrl !== '#' ? '_blank' : '_self'}
+                    rel="noopener noreferrer"
+                    onClick={(e) => {
+                      if (book.purchaseUrl === '#') {
+                        e.preventDefault();
+                        if (!book.comingSoon) {
+                          openMessageModal(
+                            'Coming Soon',
+                            'The purchase link for this book will be available soon. Stay tuned!',
+                            'info'
+                          );
+                        }
+                      }
+                    }}
+                  >
+                    {book.comingSoon ? 'Coming Soon 🍪' : 'Buy Now'}
+                  </a>
+                  
+                  {book.demoVideo && (
+                    <button
+                      className="btn-demo"
+                      onClick={() => openVideoModal(book.demoVideo)}
+                    >
+                      <i className="fa-solid fa-play"></i>
+                      Watch Demo Video
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Video Modal */}
+      {videoModalOpen && (
+        <div className="video-modal" onClick={closeVideoModal}>
+          <div className="video-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="video-modal-close" onClick={closeVideoModal}>
+              <i className="fa-solid fa-xmark"></i>
+            </button>
+            <video controls autoPlay className="video-player">
+              <source src={currentVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      )}
+
+      {/* Message Modal */}
+      <Modal
+        isOpen={messageModal.isOpen}
+        title={messageModal.title}
+        message={messageModal.message}
+        type={messageModal.type}
+        onClose={closeMessageModal}
+      />
     </section>
   );
 }
