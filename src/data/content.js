@@ -124,10 +124,16 @@ export const siteData = {
 
   // About
   editorAbout: {
-    bio: "Hailing from the legendary Amata creative dynasty, storytelling and manuscript development are part of my heritage. As the sister of veteran Nollywood actor Fred Amata, I grew up surrounded by scriptwriting, filmmaking, and literary arts. With decades of media and literary experience in Nigeria, I help authors refine their manuscripts into polished masterpieces while protecting their authentic voice and cultural authenticity.",
+    bio: "Hailing from the legendary Amata creative dynasty, storytelling and manuscript development are part of my heritage. As the sister of veteran Nollywood actors Zack Amata, Fred Amata and Ruke Amata, I grew up surrounded by scriptwriting, filmmaking, and literary arts. With decades of media and literary experience in Nigeria, I help authors refine their manuscripts into polished masterpieces while protecting their authentic voice and cultural authenticity.",
     credentials: [
       "Winner, African Writers Tribe Awards 2025",
-      "Daughter of the Amata Creative Dynasty",
+      "Sister of Nollywood veteran actors Zack Amata, Fred Amata and Ruke Amata",
+      "Fellow of the Ebedi Writers Residency, Iseyin, Oyo State Nigeria",
+      "Member of the Association of Nigerian Authors (ANA), Lagos",
+      "Founding Member of Network of Bookclubs and Reading Culture Promoters (NBRP)",
+      "Founding Member of Literary Authors Cooperative Multipurpose Society of Nigeria (LITACO)",
+      "Member of Authors Hub",
+      "Member of Nigerian Book Forum",
       "Founder of The Reading Circle",
       "Member of Warri Literary Society",
       "Children's Literacy Advocate",
@@ -135,9 +141,16 @@ export const siteData = {
   },
 
   authorAbout: {
-    bio: "Erumena Akpoghene-Adaiah (née Amata) is an award-winning author, editor, and passionate community advocate based in Delta State, Nigeria. As the founder of 'The Reading Circle' and a proud member of the 'Warri Literary Society', she dedicates her time to promoting child literacy, mentoring upcoming writers, and preserving Niger Delta cultural heritage through storytelling.",
+    bio: "Erumena Akpoghene-Adaiah (née Amata) is an award-winning author, editor, and passionate community advocate based in Delta State, Nigeria. Sister of Nollywood veteran actors Zack Amata, Fred Amata and Ruke Amata, she is the founder of 'The Reading Circle' and a proud member of the 'Warri Literary Society'. She dedicates her time to promoting child literacy, mentoring upcoming writers, and preserving Niger Delta cultural heritage through storytelling.",
     credentials: [
       "Winner, African Writers Tribe Awards 2025",
+      "Sister of Nollywood veteran actors Zack Amata, Fred Amata and Ruke Amata",
+      "Fellow of the Ebedi Writers Residency, Iseyin, Oyo State Nigeria",
+      "Member of the Association of Nigerian Authors (ANA), Lagos",
+      "Founding Member of Network of Bookclubs and Reading Culture Promoters (NBRP)",
+      "Founding Member of Literary Authors Cooperative Multipurpose Society of Nigeria (LITACO)",
+      "Member of Authors Hub",
+      "Member of Nigerian Book Forum",
       "Founder of The Reading Circle",
       "Member of Warri Literary Society",
       "Children's Rights & Literacy Advocate",
