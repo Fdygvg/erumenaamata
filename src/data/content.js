@@ -74,7 +74,7 @@ export const siteData = {
       id: 2,
       title: "From Bamboo to Bloom",
       genre: "Coming of Age Fiction",
-      year: 2023,
+      year: 2026,
       description: "Ofuafo, the Bamboo Prince, carries privilege like a crown until life teaches him that true strength is quiet, not commanding. Set in rural Nigeria, this lyrical story follows a boy who bends before he blossoms, shaped by humility, mentorship, and the gentle hands that refuse to give up on him. A story about bullying, growth, and the slow, tender work of becoming your best self.",
       coverFront: "/book img 2 front.png",
       coverBack: "/book img 2 back.png",
